@@ -1,0 +1,15 @@
+<mat-card class="workzone">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon>local_movies</mat-icon>
+      <span class="title">Scences</span>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-radio-group ngModel #scenes="ngModel">
+      <mat-radio-button *ngFor="let scene of scenes$ | async" [value]="scene.name" [checked]="scene.name === (currentScene$ | async)">
+        {{ scene.name }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card-content>
+</mat-card>

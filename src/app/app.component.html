@@ -1,0 +1,18 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span>OBS Remote Dashboard</span>
+      <span class="header-fill-remaining-space"></span>
+      <span>
+        <button mat-icon-button (click)="disconnect()">
+          <mat-icon>exit_to_app</mat-icon>
+        </button>
+      </span>
+    </mat-toolbar>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<hex-hackbit-vote-widget></hex-hackbit-vote-widget>

@@ -1,0 +1,78 @@
+/* reset */
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Global vars */
+
+$header-height: 64px;
+$footer-height: 48px;
+/* Header */
+
+.header-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+/* Footer */
+
+
+/* Layout */
+
+.container {
+  height: calc(100vh - #{$header-height} - #{$footer-height});
+}
+
+/* Work zone card */
+
+$card-width: calc(50vw - 20px);
+$card-height: calc((100vh - $header-height - $footer-height) / 2);
+$card-content-height: calc((100vh - 124px) / 2 - 10px - 100px);
+.mat-card.workzone {
+  width: calc(50vw - 20px);
+  height: $card-height;
+  padding: 0px;
+  .mat-card-title>.mat-icon {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+  .mat-card-header {
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+  .mat-card-content {
+    padding: 15px;
+    height: $card-content-height;
+    overflow-y: auto;
+    .mat-radio-group {
+      .mat-radio-button {
+        display: block;
+      }
+    }
+    .checkbox-selector {
+      .mat-checkbox {
+        display: block;
+      }
+    }
+  }
+  .command-button-block {
+    padding-bottom: 5px;
+  }
+}
+
+/* Lofin form */
+
+.login-form {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .mat-form-field {
+    width: 100%;
+  }
+  .buttons {
+    text-align: center;
+  }
+}

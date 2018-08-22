@@ -1,0 +1,15 @@
+<mat-card class="workzone">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon>loop</mat-icon>
+      <span class="title">Transitions</span>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-radio-group ngModel #transitions="ngModel">
+      <mat-radio-button *ngFor="let transition of transitions$ | async" [value]="transition.name" [checked]="transition.name === (currentTransition$ | async)">
+        {{ transition.name }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card-content>
+</mat-card>

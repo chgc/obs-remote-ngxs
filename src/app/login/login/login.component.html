@@ -1,0 +1,15 @@
+<form class="login-form" [formGroup]="formData">
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Host" formControlName="host">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="number" matInput placeholder="Port" formControlName="port">
+    </mat-form-field>
+
+    <section class="buttons">
+      <button type="button" mat-raised-button color="primary" (click)="connect()">Connect</button>
+    </section>
+  </div>
+</form>

@@ -1,0 +1,14 @@
+<mat-card class="workzone">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon>visibility</mat-icon>
+      <span class="title">Sources</span>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <section class="checkbox-selector">
+      <mat-checkbox *ngFor="let source of sources$ | async" [value]="source.name" [checked]="source.render"
+        (change)="toggleRender(source)">{{ source.name }}</mat-checkbox>
+    </section>
+  </mat-card-content>
+</mat-card>
